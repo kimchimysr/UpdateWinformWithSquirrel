@@ -22,7 +22,7 @@ namespace WinformUI
 
         private async Task CheckForUpdate()
         {
-            using (var manager = new UpdateManager(@"C:\Temp\Releases"))
+            using (var manager = new UpdateManager(@"https://raw.githubusercontent.com/kimchimysr/UpdateWinformWithSquirrel/main/Releases/"))
             {
                 await manager.UpdateApp();
             }
