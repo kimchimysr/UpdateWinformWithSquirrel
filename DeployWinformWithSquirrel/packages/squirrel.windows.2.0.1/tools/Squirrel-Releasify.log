@@ -92,3 +92,72 @@
 [04-12-22 18:32:00] info: DeltaPackageBuilder: Delta patching C:\Users\Synir\AppData\Local\SquirrelTemp\tempf\lib\net48\WinformUI_ExecutionStub.exe => C:\Users\Synir\AppData\Local\SquirrelTemp\tempg\lib\net48\WinformUI_ExecutionStub.exe
 [04-12-22 18:32:01] info: Program: Building embedded zip file for Setup.exe
 [04-12-22 18:32:02] info: Program: Finished Squirrel Updater
+[05-12-22 14:21:17] info: Program: Starting Squirrel Updater: --releasify .\WinformDemo.1.0.5.nupkg -g .\loading.gif
+[05-12-22 14:21:17] info: Program: Bootstrapper EXE found at:I:\Study Materials\Year IV\UpdateWinformWithSquirrel\DeployWinformWithSquirrel\packages\squirrel.windows.2.0.1\tools\Setup.exe
+[05-12-22 14:21:17] info: Program: Creating release package: I:\Study Materials\Year IV\UpdateWinformWithSquirrel\DeployWinformWithSquirrel\Releases\WinformDemo.1.0.5.nupkg
+[05-12-22 14:21:17] info: ReleasePackage: Creating release package: I:\Study Materials\Year IV\UpdateWinformWithSquirrel\DeployWinformWithSquirrel\Releases\WinformDemo.1.0.5.nupkg => I:\Study Materials\Year IV\UpdateWinformWithSquirrel\DeployWinformWithSquirrel\Releases\WinformDemo-1.0.5-full.nupkg
+[05-12-22 14:21:17] info: ReleasePackage: Extracting dependent packages: []
+[05-12-22 14:21:17] info: ReleasePackage: Removing unnecessary data
+[05-12-22 14:21:17] info: ReleasePackage: No release notes found in C:\Users\Synir\AppData\Local\SquirrelTemp\tempf\WinformDemo.nuspec
+[05-12-22 14:21:18] info: DeltaPackageBuilder: Extracting .\Releases\WinformDemo-1.0.4-full.nupkg and I:\Study Materials\Year IV\UpdateWinformWithSquirrel\DeployWinformWithSquirrel\Releases\WinformDemo-1.0.5-full.nupkg into C:\Users\Synir\AppData\Local\SquirrelTemp\tempg
+[05-12-22 14:21:18] info: DeltaPackageBuilder: \lib\net48\DeltaCompressionDotNet.dll hasn't changed, writing dummy file
+[05-12-22 14:21:18] info: DeltaPackageBuilder: \lib\net48\DeltaCompressionDotNet.MsDelta.dll hasn't changed, writing dummy file
+[05-12-22 14:21:18] info: DeltaPackageBuilder: \lib\net48\DeltaCompressionDotNet.PatchApi.dll hasn't changed, writing dummy file
+[05-12-22 14:21:18] info: DeltaPackageBuilder: \lib\net48\Mono.Cecil.dll hasn't changed, writing dummy file
+[05-12-22 14:21:18] info: DeltaPackageBuilder: \lib\net48\Mono.Cecil.Mdb.dll hasn't changed, writing dummy file
+[05-12-22 14:21:18] info: DeltaPackageBuilder: \lib\net48\Mono.Cecil.Pdb.dll hasn't changed, writing dummy file
+[05-12-22 14:21:18] info: DeltaPackageBuilder: \lib\net48\Mono.Cecil.Pdb.pdb not found in base package, marking as new
+[05-12-22 14:21:18] info: DeltaPackageBuilder: \lib\net48\Mono.Cecil.Rocks.dll hasn't changed, writing dummy file
+[05-12-22 14:21:18] info: DeltaPackageBuilder: \lib\net48\NuGet.Squirrel.dll hasn't changed, writing dummy file
+[05-12-22 14:21:18] info: DeltaPackageBuilder: \lib\net48\SharpCompress.dll hasn't changed, writing dummy file
+[05-12-22 14:21:18] info: DeltaPackageBuilder: \lib\net48\Squirrel.dll hasn't changed, writing dummy file
+[05-12-22 14:21:18] info: DeltaPackageBuilder: Delta patching C:\Users\Synir\AppData\Local\SquirrelTemp\tempf\lib\net48\WinformUI.exe => C:\Users\Synir\AppData\Local\SquirrelTemp\tempg\lib\net48\WinformUI.exe
+[05-12-22 14:21:18] info: DeltaPackageBuilder: \lib\net48\WinformUI.exe.config hasn't changed, writing dummy file
+[05-12-22 14:21:18] info: DeltaPackageBuilder: Delta patching C:\Users\Synir\AppData\Local\SquirrelTemp\tempf\lib\net48\WinformUI_ExecutionStub.exe => C:\Users\Synir\AppData\Local\SquirrelTemp\tempg\lib\net48\WinformUI_ExecutionStub.exe
+[05-12-22 14:21:18] info: Program: Building embedded zip file for Setup.exe
+[05-12-22 14:21:18] error: IEnableLogger: Failed to write animated GIF to temp dir: C:\Users\Synir\AppData\Local\SquirrelTemp\tempf: System.IO.FileNotFoundException: Could not find file '.\loading.gif'.
+File name: '.\loading.gif'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at Squirrel.Utility.LogIfThrows(IFullLogger This, LogLevel level, String message, Action block)
+[05-12-22 14:21:18] fatal: Finished with unhandled exception: System.AggregateException: One or more errors occurred. ---> System.IO.FileNotFoundException: Could not find file '.\loading.gif'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at Squirrel.Utility.LogIfThrows(IFullLogger This, LogLevel level, String message, Action block)
+   at Squirrel.Update.Program.<createSetupEmbeddedZip>d__16.MoveNext()
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at Squirrel.Update.Program.Releasify(String package, String targetDir, String packagesDir, String bootstrapperExe, String backgroundGif, String signingOpts, String baseUrl, String setupIcon, Boolean generateMsi, Boolean packageAs64Bit, String frameworkVersion, Boolean generateDeltas)
+   at Squirrel.Update.Program.executeCommandLine(String[] args)
+   at Squirrel.Update.Program.main(String[] args)
+---> (Inner Exception #0) System.IO.FileNotFoundException: Could not find file '.\loading.gif'.
+File name: '.\loading.gif'
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at Squirrel.Utility.LogIfThrows(IFullLogger This, LogLevel level, String message, Action block)
+   at Squirrel.Update.Program.<createSetupEmbeddedZip>d__16.MoveNext()<---
+
+[05-12-22 14:24:48] info: Program: Starting Squirrel Updater: --releasify .\WinformDemo.1.0.5.nupkg -g .\loading.gif
+[05-12-22 14:24:48] info: Program: Bootstrapper EXE found at:I:\Study Materials\Year IV\UpdateWinformWithSquirrel\DeployWinformWithSquirrel\packages\squirrel.windows.2.0.1\tools\Setup.exe
+[05-12-22 14:24:48] info: Program: Creating release package: I:\Study Materials\Year IV\UpdateWinformWithSquirrel\DeployWinformWithSquirrel\Releases\WinformDemo.1.0.5.nupkg
+[05-12-22 14:24:48] info: ReleasePackage: Creating release package: I:\Study Materials\Year IV\UpdateWinformWithSquirrel\DeployWinformWithSquirrel\Releases\WinformDemo.1.0.5.nupkg => I:\Study Materials\Year IV\UpdateWinformWithSquirrel\DeployWinformWithSquirrel\Releases\WinformDemo-1.0.5-full.nupkg
+[05-12-22 14:24:48] info: ReleasePackage: Extracting dependent packages: []
+[05-12-22 14:24:48] info: ReleasePackage: Removing unnecessary data
+[05-12-22 14:24:48] info: ReleasePackage: No release notes found in C:\Users\Synir\AppData\Local\SquirrelTemp\tempf\WinformDemo.nuspec
+[05-12-22 14:24:49] info: DeltaPackageBuilder: Extracting .\Releases\WinformDemo-1.0.4-full.nupkg and I:\Study Materials\Year IV\UpdateWinformWithSquirrel\DeployWinformWithSquirrel\Releases\WinformDemo-1.0.5-full.nupkg into C:\Users\Synir\AppData\Local\SquirrelTemp\tempg
+[05-12-22 14:24:49] info: DeltaPackageBuilder: \lib\net48\DeltaCompressionDotNet.dll hasn't changed, writing dummy file
+[05-12-22 14:24:49] info: DeltaPackageBuilder: \lib\net48\DeltaCompressionDotNet.MsDelta.dll hasn't changed, writing dummy file
+[05-12-22 14:24:49] info: DeltaPackageBuilder: \lib\net48\DeltaCompressionDotNet.PatchApi.dll hasn't changed, writing dummy file
+[05-12-22 14:24:49] info: DeltaPackageBuilder: \lib\net48\Mono.Cecil.dll hasn't changed, writing dummy file
+[05-12-22 14:24:49] info: DeltaPackageBuilder: \lib\net48\Mono.Cecil.Mdb.dll hasn't changed, writing dummy file
+[05-12-22 14:24:49] info: DeltaPackageBuilder: \lib\net48\Mono.Cecil.Pdb.dll hasn't changed, writing dummy file
+[05-12-22 14:24:49] info: DeltaPackageBuilder: \lib\net48\Mono.Cecil.Pdb.pdb not found in base package, marking as new
+[05-12-22 14:24:49] info: DeltaPackageBuilder: \lib\net48\Mono.Cecil.Rocks.dll hasn't changed, writing dummy file
+[05-12-22 14:24:49] info: DeltaPackageBuilder: \lib\net48\NuGet.Squirrel.dll hasn't changed, writing dummy file
+[05-12-22 14:24:49] info: DeltaPackageBuilder: \lib\net48\SharpCompress.dll hasn't changed, writing dummy file
+[05-12-22 14:24:49] info: DeltaPackageBuilder: \lib\net48\Squirrel.dll hasn't changed, writing dummy file
+[05-12-22 14:24:49] info: DeltaPackageBuilder: Delta patching C:\Users\Synir\AppData\Local\SquirrelTemp\tempf\lib\net48\WinformUI.exe => C:\Users\Synir\AppData\Local\SquirrelTemp\tempg\lib\net48\WinformUI.exe
+[05-12-22 14:24:49] info: DeltaPackageBuilder: \lib\net48\WinformUI.exe.config hasn't changed, writing dummy file
+[05-12-22 14:24:49] info: DeltaPackageBuilder: Delta patching C:\Users\Synir\AppData\Local\SquirrelTemp\tempf\lib\net48\WinformUI_ExecutionStub.exe => C:\Users\Synir\AppData\Local\SquirrelTemp\tempg\lib\net48\WinformUI_ExecutionStub.exe
+[05-12-22 14:24:49] info: Program: Building embedded zip file for Setup.exe
+[05-12-22 14:24:51] info: Program: Finished Squirrel Updater
